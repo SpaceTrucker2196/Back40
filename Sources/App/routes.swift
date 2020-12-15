@@ -10,7 +10,5 @@ func routes(_ app: Application) throws {
         return "Back40 v.03a"
     }
 
-    
-    try app.register(collection: TodoController())
     try app.register(collection: UsersController())
 }
