@@ -11,6 +11,11 @@ public func configure(_ app: Application) throws {
     app.databases.use(.sqlite(.file("db.sqlite")), as: .sqlite)
 
     app.migrations.add(CreateUsers())
+    app.migrations.add(CreateAmendments())
+    app.migrations.add(CreateCategories())
+    app.migrations.add(CreateGrows())
+    app.migrations.add(CreateUsers())
+    app.migrations.add(CreateWorks())
 
     //app.views.use(.leaf)
 

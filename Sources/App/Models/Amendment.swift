@@ -28,7 +28,7 @@ final class Amendment: Model, Content {
     var notes: String
     
     @Field(key: "timestamp")
-    var timestamp: String
+    var timestamp: Date
 
     init() { }
 

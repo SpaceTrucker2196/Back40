@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Fluent
+
 struct CreateGrows: Migration {
     // Prepares the database for storing Galaxy models.
     func prepare(on database: Database) -> EventLoopFuture<Void> {
