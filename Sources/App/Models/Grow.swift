@@ -72,9 +72,8 @@ final class Grow: Model, Content {
     @Field(key: "timestamp")
     var timestamp: Date
     
-//    @Children(for: \.i)
-//       var amendments: [Amendment]
-
+//
+    
     init() { }
 
     init(id: UUID? = nil, name: String) {

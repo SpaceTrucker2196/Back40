@@ -27,12 +27,15 @@ final class Amendment: Model, Content {
     @Field(key: "notes")
     var notes: String
     
+    @Field(key: "timestamp")
+    var timestamp: String
 
     init() { }
 
     init(id: UUID? = nil, name: String, username: String) {
         self.id = id
         self.name = name
+        self.timestamp = Date()
     }
     
     

@@ -25,6 +25,8 @@ final class Work: Model, Content {
     @Field(key: "notes")
     var notes: String
     
+    @Field(key: "timestamp")
+    var timestamp: Date
 
     init() { }
 
