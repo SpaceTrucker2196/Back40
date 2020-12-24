@@ -10,9 +10,9 @@ import Foundation
 import Fluent
 
 struct CreateUsers: Migration {
-    // Prepares the database for storing Galaxy models.
+
     func prepare(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("users")
+        database.schema("Users")
             .id()
             .field("name", .string)
             .field("username", .string)
@@ -21,6 +21,6 @@ struct CreateUsers: Migration {
 
     // Optionally reverts the changes made in the prepare method.
     func revert(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("users").delete()
+        database.schema("Users").delete()
     }
 }

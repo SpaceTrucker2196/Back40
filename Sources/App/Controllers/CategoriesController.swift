@@ -4,10 +4,10 @@ import Vapor
 struct CategoriesController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         let categories = routes.grouped("categories")
-        categories.get(use: index)
-        categories.post(use: create)
-        categories.group(":userID") { user in
-            user.delete(use: delete)
+            categories.get(use: index)
+            categories.post(use: create)
+            categories.group(":categoryID") { user in
+            categories.delete(use: delete)
         }
     }
 

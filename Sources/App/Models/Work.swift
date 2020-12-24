@@ -4,7 +4,7 @@ import Vapor
 
 final class Work: Model, Content {
     // Name of the table or collection.
-    static let schema = "users"
+    static let schema = "Works"
 
 
     @ID(key: .id)
@@ -19,7 +19,7 @@ final class Work: Model, Content {
     @Field(key: "practice")
     var practice: String
     
-    @Field(key: "practiceInde")
+    @Field(key: "practiceIndex")
     var materialIndex: String
     
     @Field(key: "notes")
@@ -30,7 +30,7 @@ final class Work: Model, Content {
 
     init() { }
 
-    init(id: UUID? = nil, name: String, username: String) {
+    init(id: UUID? = nil, name: String, practice: String) {
         self.id = id
         self.name = name
     }

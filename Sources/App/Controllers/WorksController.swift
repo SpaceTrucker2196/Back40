@@ -2,11 +2,11 @@ import Vapor
 
 struct WorksController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
-        let categories = routes.grouped("works")
-        categories.get(use: index)
-        categories.post(use: create)
-        categories.group(":workId") { grow in
-            grow.delete(use: delete)
+            let works = routes.grouped("works")
+            works.get(use: index)
+            works.post(use: create)
+            works.group(":workId") { grow in
+            works.delete(use: delete)
         }
     }
 
@@ -20,7 +20,7 @@ struct WorksController: RouteCollection {
     }
 
     func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return Grow.find(req.parameters.get("growId"), on: req.db)
+        return Work.find(req.parameters.get("workId"), on: req.db)
             .unwrap(or: Abort(.notFound))
             .flatMap { $0.delete(on: req.db) }
             .transform(to: .ok)

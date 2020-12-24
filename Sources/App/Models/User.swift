@@ -5,7 +5,7 @@ import Vapor
 
 final class User: Model, Content {
     // Name of the table or collection.
-    static let schema = "users"
+    static let schema = "Users"
 
 
     @ID(key: .id)

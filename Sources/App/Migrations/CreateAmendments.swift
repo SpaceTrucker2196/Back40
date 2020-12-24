@@ -10,11 +10,10 @@ import Foundation
 import Fluent
 
 struct CreateAmendments: Migration {
-    // Prepares the database for storing Galaxy models.
+
     func prepare(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("amendments")
+        database.schema("Amendments")
             .id()
-            .field("id", .uuid)
             .field("applicationDate", .date)
             .field("name", .string)
             .field("laborHours", .string)

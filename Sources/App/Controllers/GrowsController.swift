@@ -2,11 +2,11 @@ import Vapor
 
 struct GrowsController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
-        let categories = routes.grouped("grows")
-        categories.get(use: index)
-        categories.post(use: create)
-        categories.group(":growId") { grow in
-            grow.delete(use: delete)
+        let grows = routes.grouped("grows")
+        grows.get(use: index)
+        grows.post(use: create)
+        grows.group(":growId") { grow in
+        grows.delete(use: delete)
         }
     }
 

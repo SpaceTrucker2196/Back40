@@ -4,7 +4,7 @@ import FluentSQLiteDriver
 import Vapor
 
 final class Category: Model, Content {
-    static let schema = "categories"
+    static let schema = "Categories"
 
 
     @ID(key: .id)
