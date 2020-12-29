@@ -26,6 +26,6 @@ struct CreateAmendments: Migration {
 
     // Optionally reverts the changes made in the prepare method.
     func revert(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("amendments").delete()
+        database.schema("Amendments").delete()
     }
 }

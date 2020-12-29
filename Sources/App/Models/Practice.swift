@@ -4,7 +4,8 @@ import Vapor
 
 final class Practice: Model, Content {
     // Name of the table or collection.
-    static let schema = "Works"
+    static let schema = "Practices"
+
 
     @ID(key: .id)
     var id: UUID?
@@ -12,9 +13,9 @@ final class Practice: Model, Content {
     @Field(key: "name")
     var name: String
     
-    @Field(key: "laborHours")
+    @Field(key: "laborEstimate")
     var laborHours: Double
-
+    
     @Field(key: "notes")
     var notes: String
     

@@ -14,8 +14,8 @@ struct AmendmentsController: RouteCollection {
         let amendments = routes.grouped("amendments")
             amendments.get(use: index)
             amendments.post(use: create)
-            amendments.group(":amendmentID") { user in
-            amendments.delete(use: delete)
+            amendments.group(":amendmentID") { amendment in
+                amendment.delete(use: delete)
         }
     }
 

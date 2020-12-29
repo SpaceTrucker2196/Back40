@@ -1,12 +1,4 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jeffrey Kunzelman on 12/16/20.
-//
-
 import Foundation
-
 import Fluent
 
 struct CreateWorks: Migration {
@@ -27,4 +19,6 @@ struct CreateWorks: Migration {
     func revert(on database: Database) -> EventLoopFuture<Void> {
         database.schema("Works").delete()
     }
+    
+   
 }

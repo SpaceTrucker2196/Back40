@@ -5,8 +5,8 @@ struct WorksController: RouteCollection {
             let works = routes.grouped("works")
             works.get(use: index)
             works.post(use: create)
-            works.group(":workId") { grow in
-            works.delete(use: delete)
+            works.group(":workId") { work in
+                work.delete(use: delete)
         }
     }
 

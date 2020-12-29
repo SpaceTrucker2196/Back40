@@ -6,7 +6,7 @@ struct GrowsController: RouteCollection {
         grows.get(use: index)
         grows.post(use: create)
         grows.group(":growId") { grow in
-        grows.delete(use: delete)
+            grow.delete(use: delete)
         }
     }
 

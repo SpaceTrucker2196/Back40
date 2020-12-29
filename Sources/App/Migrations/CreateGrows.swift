@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jeffrey Kunzelman on 12/16/20.
-//
-
 import Foundation
 import Fluent
 

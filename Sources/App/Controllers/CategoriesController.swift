@@ -6,8 +6,8 @@ struct CategoriesController: RouteCollection {
         let categories = routes.grouped("categories")
             categories.get(use: index)
             categories.post(use: create)
-            categories.group(":categoryID") { user in
-            categories.delete(use: delete)
+            categories.group(":categoryID") { category in
+                category.delete(use: delete)
         }
     }
 

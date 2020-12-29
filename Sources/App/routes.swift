@@ -3,7 +3,7 @@ import Vapor
 
 func routes(_ app: Application) throws {
     app.get { req in
-        return req.view.render("index", ["title": "Hello Deer!"])
+        return req.view.render("index", ["title": "Hello Der!"])
     }
 
     app.get("version") { req -> String in
@@ -14,4 +14,5 @@ func routes(_ app: Application) throws {
     try app.register(collection: CategoriesController())
     try app.register(collection: GrowsController())
     try app.register(collection: WorksController())
+    try app.register(collection: PracticesController())
 }

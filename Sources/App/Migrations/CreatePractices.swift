@@ -1,18 +1,22 @@
 import Foundation
 import Fluent
 
-struct CreateUsers: Migration {
+struct CreatePractices: Migration {
 
     func prepare(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("Users")
+        database.schema("Practices")
             .id()
+            .field("timestamp", .date)
             .field("name", .string)
-            .field("username", .string)
+            .field("laborEstimate", .string)
+            .field("notes", .string)
             .create()
     }
 
     // Optionally reverts the changes made in the prepare method.
     func revert(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("Users").delete()
+        database.schema("Practices").delete()
     }
+    
+    
 }
