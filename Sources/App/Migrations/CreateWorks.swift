@@ -8,7 +8,7 @@ struct CreateWorks: Migration {
             .id()
             .field("timestamp", .date)
             .field("name", .string)
-            .field("laborHours", .string)
+            .field("laborHours", .double)
             .field("practice", .string)
             .field("practiceIndex", .string)
             .field("notes", .string)

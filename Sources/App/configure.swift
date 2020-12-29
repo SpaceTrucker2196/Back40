@@ -16,17 +16,8 @@ public func configure(_ app: Application) throws {
     app.migrations.add(CreateGrows())
     app.migrations.add(CreateWorks())
     app.migrations.add(CreatePractices())
+    app.migrations.add(CreateMaterials())
 
-//    let conn = try app.requestPooledConnection(to: .sqlite).wait()
-//    
-//    let practice = Practice(name: "Prepare and Till Beds", practice: "Till")
- //  practice.update(on:)
-
-    //app.views.use(.leaf)
-
-    
-    
-    
     // register routes
     try routes(app)
 }

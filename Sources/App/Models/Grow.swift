@@ -24,7 +24,7 @@ final class Grow: Model, Content {
     @Field(key: "cultivar")
     var cultivar: String
     
-    @Field(key: "drivingDirectins")
+    @Field(key: "drivingDirections")
     var drivingDirections: String
     
     @Field(key: "expectedHarvestDate")

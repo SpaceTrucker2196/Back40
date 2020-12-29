@@ -1,0 +1,737 @@
+{
+	"info": {
+		"_postman_id": "b6ce003a-83a2-47b2-ac59-dd9e4f714f99",
+		"name": "Back40",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create practice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "\"Compost Application\"",
+							"type": "text"
+						},
+						{
+							"key": "timestamp",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "\"apply compost to entire grow\"",
+							"type": "text"
+						},
+						{
+							"key": "laborEstimate",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/practices",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get practices",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/practices",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Joe Brassic",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "joe",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create  amendment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "applicationDate",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "timestamp",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "\"Mineralized Micronutrient\"",
+							"type": "text"
+						},
+						{
+							"key": "laborHours",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "\"Azomite\"",
+							"type": "text"
+						},
+						{
+							"key": "materialIndex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "\"Azomite\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/amendments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"amendments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get amendments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/amendments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"amendments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create  category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "applicationDate",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "timestamp",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "\"Mineralized Micronutrient\"",
+							"type": "text"
+						},
+						{
+							"key": "laborHours",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "\"Azomite\"",
+							"type": "text"
+						},
+						{
+							"key": "materialIndex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "\"Azomite\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categories"
+					],
+					"query": [
+						{
+							"key": "applicationDate",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "laborHours",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "material",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "materialIndex",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "notes",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "timestamp",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get  categories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "applicationDate",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "timestamp",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "\"Mineralized Micronutrient\"",
+							"type": "text"
+						},
+						{
+							"key": "laborHours",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "\"Azomite\"",
+							"type": "text"
+						},
+						{
+							"key": "materialIndex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "\"Azomite\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categories"
+					],
+					"query": [
+						{
+							"key": "applicationDate",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "laborHours",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "material",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "materialIndex",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "notes",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "timestamp",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create grow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "\"Beet Field\"",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "\"N Highway 42",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "\"Farmville\"",
+							"type": "text"
+						},
+						{
+							"key": "county",
+							"value": "\"Swifton\"",
+							"type": "text"
+						},
+						{
+							"key": "cultivar",
+							"value": "\"Beta vulgaris\"",
+							"type": "text"
+						},
+						{
+							"key": "drivingDirections",
+							"value": "\"2nd Mailbox on the left\"",
+							"type": "text"
+						},
+						{
+							"key": "expectedHarvestDate",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "growType",
+							"value": "\"Field\"",
+							"type": "text"
+						},
+						{
+							"key": "harvestDate",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "locationName",
+							"value": "\"Briar Rabbit Farms\"",
+							"type": "text"
+						},
+						{
+							"key": "manager",
+							"value": "\"Bob Green\"",
+							"type": "text"
+						},
+						{
+							"key": "managerPhone",
+							"value": "\"405-444-4444\"",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "\"check irrigation each week\"",
+							"type": "text"
+						},
+						{
+							"key": "plantedDate",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						},
+						{
+							"key": "propertyOwner",
+							"value": "\"Jim Briar\"",
+							"type": "text"
+						},
+						{
+							"key": "propertyOwnerPhone",
+							"value": "\"404-555-5541\"",
+							"type": "text"
+						},
+						{
+							"key": "propertyType",
+							"value": "\"lease\"",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "1.0",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "\"Beets\"",
+							"type": "text"
+						},
+						{
+							"key": "zip",
+							"value": "54222",
+							"type": "text"
+						},
+						{
+							"key": "timestamp",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/grows",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"grows"
+					],
+					"query": [
+						{
+							"key": "applicationDate",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "laborHours",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "material",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "materialIndex",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "notes",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "timestamp",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get  grows",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/grows",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"grows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create work",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "\"Till\"",
+							"type": "text"
+						},
+						{
+							"key": "laborHours",
+							"value": "1.0",
+							"type": "text"
+						},
+						{
+							"key": "practice",
+							"value": "\"No Till Culitivation\"",
+							"type": "text"
+						},
+						{
+							"key": "practiceIndex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "\"Till with disc\"",
+							"type": "text"
+						},
+						{
+							"key": "timestamp",
+							"value": "{{$timestamp}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/works",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"works"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get  works",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/works",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"works"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create  material",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "\"Azomite\"",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "\"Mineralized Micronutrients\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/materials",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get  materials",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/materials",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materials"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

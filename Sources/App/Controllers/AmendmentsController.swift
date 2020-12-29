@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jeffrey Kunzelman on 12/23/20.
-//
-
 
 import Vapor
 

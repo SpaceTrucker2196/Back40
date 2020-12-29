@@ -10,7 +10,7 @@ final class Amendment: Model, Content {
     var id: UUID?
     
     @Field(key: "applicationDate")
-    var applicationDate: String
+    var applicationDate: Date
     
     @Field(key: "name")
     var name: String

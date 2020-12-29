@@ -16,11 +16,11 @@ struct CreateAmendments: Migration {
             .id()
             .field("applicationDate", .date)
             .field("name", .string)
-            .field("laborHours", .string)
+            .field("laborHours", .double)
             .field("material", .string)
             .field("materialIndex", .string)
             .field("notes", .string)
-            .field("timestamp", .string)
+            .field("timestamp", .date)
             .create()
     }
 

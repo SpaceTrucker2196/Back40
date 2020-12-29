@@ -11,8 +11,8 @@ final class User: Model, Content {
     @ID(key: .id)
     var id: UUID?
     
-    @Parent(key: "category_id")
-        var category: Category
+//    @Parent(key: "category_id")
+//    var category: Category
     
     @Field(key: "name")
     var name: String

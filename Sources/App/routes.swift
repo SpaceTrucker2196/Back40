@@ -10,9 +10,11 @@ func routes(_ app: Application) throws {
         return "Back40 v.03a"
     }
 
+    try app.register(collection: AmendmentsController())
     try app.register(collection: UsersController())
     try app.register(collection: CategoriesController())
     try app.register(collection: GrowsController())
     try app.register(collection: WorksController())
     try app.register(collection: PracticesController())
+    try app.register(collection: MaterialsController())
 }

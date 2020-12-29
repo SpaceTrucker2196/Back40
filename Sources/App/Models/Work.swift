@@ -20,7 +20,7 @@ final class Work: Model, Content {
     var practice: String
     
     @Field(key: "practiceIndex")
-    var materialIndex: String
+    var practiceIndex: String
     
     @Field(key: "notes")
     var notes: String
