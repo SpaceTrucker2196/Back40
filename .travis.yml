@@ -1,0 +1,6 @@
+language: objective-c 
+osx_image: xcode12.2 
+xcode_project: Back40.xcodeproj 
+xcode_scheme: Back40
+xcode_sdk: p:latform=iOS Simulator,OS=12.2,name=iPad Pro (9.7-inch)
+
