@@ -26,7 +26,7 @@ Practice:
 
 User:
 
-  {
+    {
         "name": "Joe Brassic",
         "username": "joe",
         "id": "2B49AC43-2065-4816-B2EE-1BEA89ED7D63"
@@ -45,9 +45,9 @@ Amendment:
         "materialIndex": ""
     }
  
- Grow:
+Grow:
  
- {
+    {
         "zip": "54222",
         "title": "\"Beets\"",
         "drivingDirections": "\"2nd Mailbox on the left\"",
@@ -72,7 +72,7 @@ Amendment:
         "propertyOwnerPhone": "\"404-555-5541\""
     }
     
-    Work:
+Work:
     
     {
     "id": "0EF28478-3BD9-4154-A2F4-9C9705603E08",
@@ -82,14 +82,13 @@ Amendment:
     "timestamp": "2051-12-30T17:11:32Z",
     "name": "\"Till\"",
     "practiceIndex": "\"index\""
-}
+    }
    
 Material: 
-
-{
+    {
     "notes": "\"Mineralized Micronutrients\"",
     "id": "3D02416A-1190-439E-A924-14B7B460288A",
     "name": "\"Azomite\""
-}
+    }
 
 
