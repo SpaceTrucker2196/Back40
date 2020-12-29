@@ -1,2 +1,4 @@
 .build/*
 .swiftpm/*
+*.sqlite
+Back40.sqlite
