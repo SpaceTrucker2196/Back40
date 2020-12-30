@@ -1,6 +1,6 @@
 
 import Foundation
-import FluentSQLiteDriver
+import FluentPostgresDriver
 import Vapor
 
 final class Category: Model, Content {

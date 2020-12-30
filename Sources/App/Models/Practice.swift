@@ -1,5 +1,5 @@
 import Foundation
-import FluentSQLiteDriver
+import FluentPostgresDriver
 import Vapor
 
 final class Practice: Model, Content {
