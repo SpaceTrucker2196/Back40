@@ -8,8 +8,8 @@ To open project in x-code, go to the project directory and type:
 
 vapor xcode -y
 
-to run database migrations:
-vapor run migrations
+to run database migrations after deploying to heroku
+heroku run Run -- migrate --env production
 
 
 #Schema
