@@ -16,7 +16,23 @@ struct UsersController: RouteCollection {
     }
 
     func create(req: Request) throws -> EventLoopFuture<User> {
-        let user = try req.content.decode(User.self)
+        
+        try User.Create.validate(content: req)
+        
+        let create = try req.content.decode(User.Create.self)
+        
+        guard create.password == create.confirmPassword else {
+                throw Abort(.badRequest, reason: "Passwords did not match")
+        }
+        
+        let user = try User(
+            id:nil,
+            name: create.name,
+            username:create.username,
+            passwordHash:Bcrypt.hash(create.password),
+            email:create.email
+        )
+        
         return user.save(on: req.db).map { user }
     }
 
