@@ -10,8 +10,8 @@ func routes(_ app: Application) throws {
         return "Back40 v.03a"
     }
 
-    let protected = app.grouped(UserAuthenticator())
-    protected.get("me") { req -> String in
+    let protected = app.grouped(User.authenticator())
+        protected.get("me") { req -> String in
         try req.auth.require(User.self).name
     }
     

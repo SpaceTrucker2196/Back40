@@ -2,6 +2,7 @@
 import Foundation
 import FluentPostgresDriver
 import Vapor
+import Fluent
 
 final class User: Model, Content {
 
@@ -50,7 +51,7 @@ extension User.Create: Validatable {
     }
 }
 
-extension User: Authenticatable {
+extension User: ModelAuthenticatable {
     static let usernameKey = \User.$email
     static let passwordHashKey = \User.$passwordHash
 
