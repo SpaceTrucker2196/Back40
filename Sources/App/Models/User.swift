@@ -49,3 +49,12 @@ extension User.Create: Validatable {
         validations.add("password", as: String.self, is: .count(8...))
     }
 }
+
+extension User: Authenticatable {
+    static let usernameKey = \User.$email
+    static let passwordHashKey = \User.$passwordHash
+
+    func verify(password: String) throws -> Bool {
+        try Bcrypt.verify(password, created: self.passwordHash)
+    }
+}
