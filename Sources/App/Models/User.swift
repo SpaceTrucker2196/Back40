@@ -30,6 +30,7 @@ final class User: Model, Content {
         self.name = name
         self.username = username
         self.passwordHash = passwordHash
+        self.email = email
     }
 }
 
@@ -46,7 +47,7 @@ extension User.Create: Validatable {
     static func validations(_ validations: inout Validations) {
         validations.add("name", as: String.self, is: !.empty)
         validations.add("username", as: String.self, is: !.empty)
-        validations.add("email", as: String.self, is: .email)
+        validations.add("email", as: String.self, is: !.empty)
         validations.add("password", as: String.self, is: .count(8...))
     }
 }
