@@ -3,9 +3,8 @@ import FluentPostgresDriver
 import Vapor
 
 final class Work: Model, Content {
-    // Name of the table or collection.
-    static let schema = "Works"
 
+    static let schema = "Works"
 
     @ID(key: .id)
     var id: UUID?

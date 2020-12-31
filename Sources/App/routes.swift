@@ -15,9 +15,6 @@ func routes(_ app: Application) throws {
     passwordProtected.post("login") { req -> User in
         try req.auth.require(User.self)
     }
-    passwordProtected.post("users") { req -> User in
-        try req.auth.require(User.self)
-    }
     
     try app.register(collection: AmendmentsController())
     try app.register(collection: UsersController())
