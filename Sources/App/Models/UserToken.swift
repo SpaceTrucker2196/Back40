@@ -30,6 +30,6 @@ extension UserToken: ModelTokenAuthenticatable {
     static let userKey = \UserToken.$user
 
     var isValid: Bool {
-        false
+        true
     }
 }

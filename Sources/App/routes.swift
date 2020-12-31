@@ -19,13 +19,12 @@ func routes(_ app: Application) throws {
             .map { token }
     }
 
-    let tokenProtected = app.grouped(UserToken.authenticator())
-    tokenProtected.get("me") { req -> User in
-        try req.auth.require(User.self)
-    }
+        let tokenProtected = app.grouped(UserToken.authenticator())
+        tokenProtected.get("me") { req -> User in
+            try req.auth.require(User.self)
+        }
 
-    
-    try tokenProtected.register(collection: AmendmentsController())
+        try tokenProtected.register(collection: AmendmentsController())
     try passwordProtected.register(collection: UsersController())
     try tokenProtected.register(collection: CategoriesController())
     try tokenProtected.register(collection: GrowsController())
