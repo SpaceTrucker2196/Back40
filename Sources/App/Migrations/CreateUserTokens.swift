@@ -7,7 +7,7 @@ struct CreateUserTokens: Migration {
         database.schema("user_tokens")
             .id()
             .field("value", .string, .required)
-            .field("user_id", .uuid, .required, .references("users", "id"))
+            .field("user_id", .uuid, .required, .references("Users", "id"))
             .unique(on: "value")
             .create()
     }
