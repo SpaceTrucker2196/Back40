@@ -43,6 +43,7 @@ extension User {
         var confirmPassword: String
     }
 }
+
 extension User.Create: Validatable {
     static func validations(_ validations: inout Validations) {
         validations.add("name", as: String.self, is: !.empty)
@@ -52,8 +53,17 @@ extension User.Create: Validatable {
     }
 }
 
+extension User {
+    func generateToken() throws -> UserToken {
+        try .init(
+            value: [UInt8].random(count: 16).base64,
+            userID: self.requireID()
+        )
+    }
+}
+
 extension User: ModelAuthenticatable {
-    static let usernameKey = \User.$username
+    static let usernameKey = \User.$email
     static let passwordHashKey = \User.$passwordHash
 
     func verify(password: String) throws -> Bool {

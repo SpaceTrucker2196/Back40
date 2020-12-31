@@ -18,6 +18,7 @@ public func configure(_ app: Application) throws {
         app.migrations.add(CreateWorks())
         app.migrations.add(CreatePractices())
         app.migrations.add(CreateMaterials())
+        app.migrations.add(CreateUserTokens())
     } 
 
     // register routes

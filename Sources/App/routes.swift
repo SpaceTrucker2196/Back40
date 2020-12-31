@@ -13,7 +13,9 @@ func routes(_ app: Application) throws {
     let passwordProtected = app.grouped(User.authenticator())
     
     passwordProtected.post("login") { req -> User in
-        try req.auth.require(User.self)
+        let user = try req.auth.require(User.self)
+        let token = try user.generateToken()
+        return token.save(on: req.db).map {token}
     }
     
     try app.register(collection: AmendmentsController())
