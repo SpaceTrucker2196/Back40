@@ -63,7 +63,7 @@ extension User {
 }
 
 extension User: ModelAuthenticatable {
-    static let usernameKey = \User.$email
+    static let usernameKey = \User.$name
     static let passwordHashKey = \User.$passwordHash
 
     func verify(password: String) throws -> Bool {
