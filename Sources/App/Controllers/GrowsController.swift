@@ -8,9 +8,6 @@ struct GrowsController: RouteCollection {
         grows.group(":growId") { grow in
             grow.delete(use: delete)
         }
-        grows.postauth.require(User.self)
-        
-        
     }
 
     func index(req: Request) throws -> EventLoopFuture<[Grow]> {
