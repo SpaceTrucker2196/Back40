@@ -23,12 +23,13 @@ func routes(_ app: Application) throws {
     tokenProtected.get("me") { req -> User in
         try req.auth.require(User.self)
     }
+
     
-    try app.register(collection: AmendmentsController())
-    try app.register(collection: UsersController())
-    try app.register(collection: CategoriesController())
-    try app.register(collection: GrowsController())
-    try app.register(collection: WorksController())
-    try app.register(collection: PracticesController())
-    try app.register(collection: MaterialsController())
+    try tokenProtected.register(collection: AmendmentsController())
+    try passwordProtected.register(collection: UsersController())
+    try tokenProtected.register(collection: CategoriesController())
+    try tokenProtected.register(collection: GrowsController())
+    try tokenProtected.register(collection: WorksController())
+    try tokenProtected.register(collection: PracticesController())
+    try tokenProtected.register(collection: MaterialsController())
 }
