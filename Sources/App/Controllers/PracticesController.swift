@@ -16,8 +16,6 @@ struct PracticesController: RouteCollection {
 
     func create(req: Request) throws -> EventLoopFuture<Practice> {
         let practice = try req.content.decode(Practice.self)
-        practice.name = "Till Beds and Apply Compost"
-        
         return practice.save(on: req.db).map { practice }
     }
 
